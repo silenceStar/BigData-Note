@@ -117,6 +117,12 @@ WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platfo
 ```
 >表示 Hadoop 无法加载本地（Native）库，因此会使用 Java 内置类 作为替代。虽然不会导致严重错误，但可能会影响 性能（如压缩、文件操作）。不过本地测试就无所谓了
 
+bug:
+> Hadoop 的 start-dfs.sh 和其他脚本会通过 SSH 连接到机器（即使是本地机器）
+- 🐞 **Bug:** Mac没有开通ssh访问本机，请参考***文档。
+- 🐞 **Bug:** Mac没有给予 全磁盘访问权限，请参考***文档。
+- 🐞 **Bug:** 如果你没有配置公钥认证，请参考***文档。
+- 
 ##  验证安装
 ```bash
 jsp
